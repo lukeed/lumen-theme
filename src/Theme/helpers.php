@@ -12,6 +12,6 @@ if (!function_exists('theme_url')) {
     {
         $currentTheme = app('Lukeed\Theme\Contracts\ThemeInterface')->get()->getDirectory();
 
-        return app('url')->asset('themes' . DIRECTORY_SEPARATOR . $currentTheme . DIRECTORY_SEPARATOR . $path, $secure);
+        return app('url')->asset('themes' . '/' . $currentTheme . '/' . $path, $secure);
     }
 }
