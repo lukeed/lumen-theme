@@ -10,7 +10,7 @@ if (!function_exists('theme_url')) {
      */
     function theme_url($path, $secure = null)
     {
-        $currentTheme = app('Lukeed\Theme\Contracts\ThemeInterface')->get()->getDirectory();
+        $currentTheme = Theme::get()->getDirectory();
 
         return app('url')->asset('themes' . '/' . $currentTheme . '/' . $path, $secure);
     }
